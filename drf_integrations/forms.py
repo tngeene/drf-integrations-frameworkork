@@ -42,10 +42,10 @@ class ApplicationInstallationForm(forms.ModelForm):
         # around this we add an option to be used as null.
         # If the user only had view access to the page then we cannot set the choices
         # because the api_client_name key will not exist under self.fields
-        if self.fields.get("api_client_name"):
-            self.fields["api_client_name"].choices = [("-", "-")] + self.fields[
-                "api_client_name"
-            ].choices
+        # if self.fields.get("api_client_name"):
+        #     self.fields["api_client_name"].choices = [("-", "-")] + self.fields[
+        #         "api_client_name"
+        #     ].choices
 
         if self.initial.get("api_client_name") is None:
             self.initial["api_client_name"] = "-"
