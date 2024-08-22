@@ -1,2 +1,2 @@
-mixpanel==4.5.0
+mixpanel==4.10.1
 psycopg2==2.8.5
